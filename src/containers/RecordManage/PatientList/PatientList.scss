@@ -1,3 +1,7 @@
+body {
+    font-size: 20px;
+}
+
 .record-content h1 {
 	margin-bottom: 45px;
 	// text-align: center;
@@ -202,4 +206,46 @@ h1, h2, h3, h4 {
 .timeline-item p{
     margin: 15px auto;
     line-height: 21px;
+}
+
+.plistbtn {
+    display: none;
+    font-size: 2rem;
+}
+
+
+@media screen and (max-width: 850px){
+   .inpt-idcard,.userListInfo,.userHr {
+    margin-left: 0!important;
+   } 
+
+    .inpt-idcard {
+        width: 70%!important;
+    }
+
+    .p-list-btn {
+        margin: 0!important;
+        padding: 0 10px!important;
+    }  
+}
+
+@media screen and (max-width: 400px){
+    .p-list-btn {
+        display: none;
+    }
+
+    .inpt-idcard {
+        width: 80%!important;
+    }
+
+    .plistbtn {
+        display: inline-block;
+        margin-top: -10px;
+        float: right;
+        color: #fff;
+        font-size: 1.5rem;
+        padding: 0 10px;
+        line-height: 1.5rem;
+        border-radius: 8px;        
+    }
 }

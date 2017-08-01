@@ -53,11 +53,11 @@ class	HealthRecord	extends	React.Component{
 			<div>
 				<h1	className="role">健康管理记录号</h1>
 				<span	className="inputNum"	style={{marginLeft:30,fontSize:16}}>
-					请输入身份证号码&nbsp;&nbsp;&nbsp;&nbsp;
-				<Search	style={{width:450,height:35,marginTop:50,border:0,borderBottom:0}}
-					onSearch={this.handleSearch}/>
+					请输入身份证号码：
+				<Search	style={{width:500,height:35,marginTop:50,border:0,borderBottom:0}}
+					onSearch={this.handleSearch} className="hrCard"/>
 				</span>
-				<p	className="healthrecord"	style={{display:'none'}}>
+				<p className="healthrecord"	style={{display:'none'}}>
 					{number}
 				</p>
 			</div>

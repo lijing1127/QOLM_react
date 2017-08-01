@@ -92,3 +92,27 @@
 	box-shadow:  none;
 	border-radius: none;
 }
+
+
+//新建档案响应式
+@media screen and (max-width: 950px){
+	.newUser {
+		width: 100%;
+	}
+
+	.minzu {
+		display: inline-block;
+		line-height: 32px;
+	}
+
+	.divMz {
+		margin-bottom: 3%;
+	}
+
+	.selectMz {
+		width: 60%;
+		display: inline-block;
+		margin-bottom: 0;
+		margin-left: 3%;
+	}
+}

@@ -3,3 +3,28 @@
 	font-size:40px;
 	margin-top:80px;
 }
+
+
+@media screen and (max-width: 750px){
+	
+	.role {
+		font-size: 1rem;
+	}
+
+	.inputNum {
+		display: inline-block;
+		margin:0!important;
+		margin-top: 15%!important;
+		width: 98%;
+	}
+
+	.hrCard {
+		margin-top:10px!important;
+		width: 100%!important;
+	}
+
+	.healthrecord {
+		font-size: 1.5rem;
+		margin-top: 10%!important;
+	}
+}
