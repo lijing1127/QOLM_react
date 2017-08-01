@@ -10,7 +10,7 @@ import './App.scss';
 
 import Login from "../Login/Login";
 
-const { Header, Sider, Content } = Layout;
+const { Header, Sider, Content, Footer } = Layout;
 
 @observer
 class App extends Component {
@@ -48,6 +48,9 @@ class App extends Component {
           <Content style={{ margin: '24px 16px', padding: 24, background: '#fff'}}>
             {this.props.children}
           </Content>
+          <Footer style={{ textAlign: 'center' }}>
+            慢病健康管理平台 ©2016 Created by 御邦医通
+          </Footer>
         </Layout>
       </Layout>
     );
