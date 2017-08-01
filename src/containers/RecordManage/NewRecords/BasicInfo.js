@@ -67,7 +67,7 @@ class NormalLoginForm extends React.Component {
       <div>
         <Form onSubmit={this.handleSubmit} className="login-form record-block" >
           <Row>
-            <Col span={10} style={{float: 'left'}}>
+            <Col span={10} style={{float: 'left'}} className="newUser">
               <FormItem>
                 {getFieldDecorator('userName', {
                   rules: [{ required: true, message: '请填写姓名!' }],
@@ -104,10 +104,10 @@ class NormalLoginForm extends React.Component {
                 )}
               </FormItem>
             </Col>
-            <Col span={10} style={{ float: 'right', fontSize: 16 }}>
-              <div className="mar-b mar-t">
-                <p className="mar-b">民族</p>
-                  <FormItem>
+            <Col span={10} style={{ float: 'right', fontSize: 16 }} className="newUser">
+              <div className="mar-b mar-t divMz">
+                <p className="mar-b minzu">民族</p>
+                  <FormItem className="selectMz">
                     {getFieldDecorator('nation', {
                       rules: [{ required: false, message: 'Please input your username!' }],
                       initialValue: "汉族",

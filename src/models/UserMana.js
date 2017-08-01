@@ -36,8 +36,7 @@ class UserMana {
 			//console.log('cuole');
 		});
 		runInAction("request success", () => {
-			// console.log(ret);
-			this.ManaList = Object.assign({}, this.ManaList, ret);
+			this.ManaList = Object.assign({},this.ManaList, ret);
 		});
 	}
 

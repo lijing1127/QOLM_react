@@ -60,8 +60,11 @@ class PatientList extends React.Component{
         <Button className="p-list-btn" style={{ height:35,marginTop:1,marginRight:50}}>
           <Link to={"/recordManage/newRecord"}>添加新客户</Link>
         </Button>
-        <p style={{fontSize:16,marginLeft:100,marginTop:30,marginBottom:15}}>客户信息</p>
-        <hr style={{marginLeft:100,marginTop:15,}}/>
+        <Button className="plistbtn" style={{ height:35,marginTop:1}} type="primary">
+          <Link to={"/recordManage/newRecord"}>+</Link>
+        </Button>
+        <p style={{fontSize:16,marginLeft:100,marginTop:30,marginBottom:15}} className="userListInfo">客户信息</p>
+        <hr style={{marginLeft:100,marginTop:15,}} className="userHr" />
         <p style={{fontSize:16,marginLeft:100,marginTop:15,display:"none"}}>没有查看权限</p>
         <div className="showList" style={{display: "none"}}>
           <ul style={{marginLeft:20}}>
