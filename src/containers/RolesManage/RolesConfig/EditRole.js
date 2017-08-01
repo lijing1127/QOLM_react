@@ -1,7 +1,7 @@
 // 角色配置页面的添加角色按钮弹出来的组件模块
 import React, { PropTypes } from "react";
 //import ReactDOM from 'react-dom';
-import { Checkbox,Modal, Button, Input, Form } from 'antd';
+import { Checkbox,Modal, Input, Form } from 'antd';
 import { observer } from 'mobx-react';
 import RoleConfig from 'models/rolesConfig';
 import '../CustomTable.scss';
@@ -57,7 +57,7 @@ class AddRole extends React.Component {
     const { name, abilities } = RoleConfig.roleItem;
     return (
       <div>
-        <Button type="primary" className="showmodal" onClick={this.showModal}>编辑</Button>
+        <span className="showBtn" onClick={this.showModal}>编辑</span>
         <Modal
           title="添加角色"
           visible={this.state.visible}
