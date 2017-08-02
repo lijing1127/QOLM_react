@@ -19,7 +19,7 @@ class MeanInfo extends React.Component{
 		return (
 			<div className="info">			
 				<Row>
-					<Col xs={{ span: 26, }} lg={{ span: 12 }}>
+					<Col xs={{ span: 26, }} lg={{ span: 12 }} sm={{ span: 12 }}>
 						<p>健康管理师：<span>{ userName }</span></p>
 					</Col>
 					<Col xs={{ span: 26, }} lg={{ span: 12 }}>
@@ -27,7 +27,7 @@ class MeanInfo extends React.Component{
 					</Col>
 				</Row>
 				<Row>
-					<Col xs={{ span: 26, }} lg={{ span: 12 }}>
+					<Col xs={{ span: 26, }} lg={{ span: 12 }}  sm={{ span: 12 }}>
 						<p>总额：<span>{ prices }</span></p>
 					</Col>
 					<Col xs={{ span: 26, }} lg={{ span: 12 }}>

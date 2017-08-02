@@ -5,9 +5,7 @@
 	border:1px solid #ccc;
 }
 
-.userBorder .modify {
-	width: 10%;
-}
+
 
 .userBorder h3 {
 	text-align: center;
@@ -58,4 +56,10 @@
 
 .userBorder .ubColor p span {
 	color: #108ee9;
+}
+
+@media screen and (max-width: 640px) {
+	.userBorder .basicInfo .idLeft {
+		display: none;
+	}
 }
