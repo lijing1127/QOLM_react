@@ -249,3 +249,47 @@ h1, h2, h3, h4 {
         border-radius: 8px;        
     }
 }
+
+
+
+.timeline-num {
+    font-size: 0.7rem;
+}
+
+
+.pl-ul {
+    display: flex;
+    margin-left: 2rem;
+}
+
+@media screen and (max-width: 640px){
+    .pl-ul {
+        margin-left: 0;
+    }
+
+    .pl-ul .pl-li:last-child button {
+        margin-right: 0.35rem!important;
+    }
+
+    .iconuser {
+        font-size: 1rem!important;
+    }
+}
+
+.pl-ul .pl-li:first-child {
+    flex:1;
+    padding:0;
+}
+
+.pl-ul .pl-li:last-child {
+    flex:3;
+}
+
+.pl-ul .pl-li .pl-userInfo li {
+    padding:0;
+    width: auto;
+}
+
+.pl-userId {
+    font-size: 0.5rem;
+}

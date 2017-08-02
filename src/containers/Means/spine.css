@@ -5,6 +5,16 @@
 	display: none;
 }
 
+@media screen and (max-width: 650px){
+	.userSpine {
+		width: 100%;
+	}
+
+	.null {
+		width: 65%!important;
+	}
+}
+
 .spineWay {
 	width: 95%;	
 }
