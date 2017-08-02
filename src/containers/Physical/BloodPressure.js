@@ -50,7 +50,7 @@ class BloodPressure extends React.Component {
 								)}
 							</FormItem>
 						</Col>
-						<Col xs={26} sm={12} md={12} lg={12} xl={25} span={26} style={{ float: 'left'}}>
+						<Col className="media" xs={26} sm={12} md={12} lg={12} xl={25} span={26} style={{ float: 'left',paddingLeft:60}}>
 							<span className="fontSize mar-l">舒张压</span>
 							<FormItem>
 								{getFieldDecorator('max_BloodPressure', {

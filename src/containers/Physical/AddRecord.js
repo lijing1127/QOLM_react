@@ -59,7 +59,7 @@ class NormalLoginForm extends React.Component {
                 )}
               </FormItem>
             </Col>
-            <Col xs={26} span={26} style={{float: 'left'}}>
+            <Col xs={26} span={26} className="media" style={{float: 'left',paddingLeft:60}}>
               <div>
                 <p  className="fontSize">性别</p>
                   <RadioGroup value={sex} disabled>
@@ -80,7 +80,7 @@ class NormalLoginForm extends React.Component {
                 )}
               </FormItem>
               </Col>
-              <Col xs={26} sm={12} lg={12} xl={12} span={25} style={{float: 'left'}}>
+              <Col className="media" xs={26} sm={12} lg={12} xl={12} span={25} style={{float: 'left',paddingLeft:60}}>
                 <FormItem >
                 {getFieldDecorator('phone', {
                   rules: [{ required: false, message: 'Please input your phone!' }],

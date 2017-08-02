@@ -35,10 +35,11 @@
 .inpt.ant-input:not(:first-child), .border-none {
 	border: none;
 	box-shadow: none;
+	margin-top:15px;
 }
 .ant-input-affix-wrapper, .border-none{
 	border: none;
-	border-bottom: 1px solid #e1e1e1;
+	border-bottom: 1px solid #e1e1e1!important;
 	font-size: 16px;
 }
 .ant-input-affix-wrapper .ant-input:not(:first-child) {
@@ -163,39 +164,6 @@
 }
 
 
-@media screen and (minwidth: 640px) and (max-width:768px) {
-	.radioCss{
-		padding-left:400px;	}
-		.input-phone{
-		padding-left:400px;	}
-}
-@media screen and (minwidth: 768px) and (max-width:992px) {
-	.radioCss{
-		padding-left:500px;	}
-		.input-phone{
-		padding-left:500px;	}
-}
-@media screen and (minwidth: 992px) and (max-width:1200px) {
-	.radioCss{
-		padding-left:600px;	}
-		.input-phone{
-		padding-left:600px;	}
-}
-@media screen and (minwidth: 1200px) and (max-width:1600px) {
-	.radioCss{
-		padding-left:700px;	}
-		.input-phone{
-		padding-left:700px;	}
-}
-@media screen and (minwidth: 1420px) and (max-width:1920px) {
-	.radioCss{
-	width:50%;
-		padding-left:1000px;	}
-		.input-phone{
-		padding-left:1000px;	}
-}
-
-
 //血压测量页面
 #min_BloodPressure{
 	border:none;	
@@ -206,4 +174,11 @@
 }
 .border-n .ant-input{
 	border:none;
+}
+
+
+@media screen and (max-width: 640px){
+	.media{
+		padding-left:0!important;
+	}
 }

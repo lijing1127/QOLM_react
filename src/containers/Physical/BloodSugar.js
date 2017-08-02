@@ -40,11 +40,11 @@ class BloodPressure extends React.Component {
 			<div style={{clear: 'both', marginTop: 30}}>
 				<Form onSubmit={this.handleSubmit} className="login-form record-block">
             <Row>
-            <Col span={10} style={{float: 'left', marginTop: 21, fontSize: 16}}>
-						<span>血糖值</span>
+            <Col xs={26} sm={12} md={12} lg={12} xl={25}  span={26} style={{float: 'left', marginTop: 20}}>
+						<span className="fontSize">血糖值</span>
 						<FormItem>
 							{getFieldDecorator('val', {
-							rules: [{ required: false, message: 'Please input your username!' }],
+							rules: [{ required: false, message: 'Please input your value!' }],
 							})(
 							<Input className="border-n" suffix={<span className="fontSize">毫克/分升</span>} placeholder="" />
 							)}
@@ -52,27 +52,27 @@ class BloodPressure extends React.Component {
 			</Col>
 				<Col xs={26} sm={12} md={12} lg={12} xl={25} span={26} style={{ float: 'left'}}>
 					<div className="mar-b mar-t">
-					<p className="mar-b">测量类型</p>
-                    <FormItem>
-                      {getFieldDecorator('item_type', {
-                        rules: [{ required: false, message: 'Please input your username!' }],
-                        initialValue: "餐前血糖"
-                      })(
-                        <Select
-                          showSearch
-                          className="fontSize"
-                          style={{ width: 200 }}
-                          optionFilterProp="children"
-                          onChange={this.handleChange}
-                          filterOption={(input, option) => option.props.children.toLowerCase().indexOf(input.toLowerCase()) >= 0}
-                        >
-                          <Option className="optionWidth" value="1">餐前血糖</Option>
-                          <Option className="optionWidth" value="2">餐后血糖</Option>
-                          <Option className="optionWidth" value="3">睡前血糖</Option>
-                          <Option className="optionWidth" value="4">睡后血糖</Option>
-                        </Select>
-                      )}
-                    </FormItem>
+					<p className="fontSize">测量类型</p>
+            <FormItem>
+              {getFieldDecorator('item_type', {
+                rules: [{ required: false, message: 'Please input your type!' }],
+                initialValue: "餐前血糖"
+              })(
+                <Select
+                  showSearch
+                  className="fontSize"
+                  style={{ width: 200,marginTop:15}}
+                  optionFilterProp="children"
+                  onChange={this.handleChange}
+                  filterOption={(input, option) => option.props.children.toLowerCase().indexOf(input.toLowerCase()) >= 0}
+                >
+                  <Option className="optionWidth" value="1">餐前血糖</Option>
+                  <Option className="optionWidth" value="2">餐后血糖</Option>
+                  <Option className="optionWidth" value="3">睡前血糖</Option>
+                  <Option className="optionWidth" value="4">睡后血糖</Option>
+                </Select>
+              )}
+            </FormItem>
 					</div>
 					</Col>
 				</Row>
