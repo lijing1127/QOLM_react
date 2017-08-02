@@ -20,7 +20,7 @@ class BloodFat extends React.Component {
 	render() {
 		return (
 			<div className="record-content">
-				<PhysicalInfo store={this.state} />
+				<PhysicalInfo className="border-n ant-input" store={this.state} />
 			</div>
 		);
 	}

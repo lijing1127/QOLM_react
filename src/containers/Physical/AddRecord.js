@@ -45,12 +45,12 @@ class NormalLoginForm extends React.Component {
     return (
       <div>
         <Row>
-          <Col  xs={26} sm={12} md={12} lg={26} xl={26} span={26} ><h3 style={{paddingLeft: 50, marginBottom: 10}}>添加新记录</h3></Col>
+          <Col  xs={26} sm={12} md={12} lg={12} xl={25} span={25} ><h3 style={{paddingLeft: 50, marginBottom: 10}}>添加新记录</h3></Col>
         </Row>
         
         <Form onSubmit={this.handleSubmit} className="login-form record-block">
           <Row>
-            <Col  xs={26} sm={12} md={12} lg={26} xl={26} span={26} style={{float: 'left'}}>
+            <Col  xs={26} sm={12} md={12} lg={12} xl={25} span={25} style={{float: 'left'}}>
               <FormItem>
                 {getFieldDecorator('idcard', {
                   rules: [{ required: false, message: 'Please input your idcard!' }],
@@ -58,11 +58,9 @@ class NormalLoginForm extends React.Component {
                   <Input onChange={this.handleChange.bind(this)} className="inpt inpt-left-t input-style input-idcard" prefix={<span className="fontSize">身份证号</span>}/>
                 )}
               </FormItem>
-              
-              
             </Col>
-            <Col xs={26} span={7} >
-              <div className="mar-b mar-t">
+            <Col xs={26} span={26} className="media" style={{float: 'left',paddingLeft:60}}>
+              <div>
                 <p  className="fontSize">性别</p>
                   <RadioGroup value={sex} disabled>
                     <div className="inline"><Radio className="fontSize input-style" value={"男"}>男</Radio></div>
@@ -72,7 +70,7 @@ class NormalLoginForm extends React.Component {
             </Col>
           </Row>
           <Row>
-            <Col  xs={26} sm={12} md={12} lg={12} xl={26} span={26}>
+            <Col  xs={26} sm={12} md={12} lg={12} xl={25} span={25} style={{float: 'left'}}>
               <FormItem>
                 {getFieldDecorator('name',{
                   rules: [{ required: false, message: 'Please input your username!' }],
@@ -82,18 +80,15 @@ class NormalLoginForm extends React.Component {
                 )}
               </FormItem>
               </Col>
-              <Col  xs={26} sm={12} md={12} lg={12} xl={26} span={7} >
-              <div className="mar-b" style={{}}>
-                <FormItem>
+              <Col className="media" xs={26} sm={12} lg={12} xl={12} span={25} style={{float: 'left',paddingLeft:60}}>
+                <FormItem >
                 {getFieldDecorator('phone', {
                   rules: [{ required: false, message: 'Please input your phone!' }],
                   initialValue: `${phone}`,
                 })(
                   <Input className="inpt input-style inpt-left-t" prefix={<span  className="input-style fontSize">手机号</span>} placeholder="" disabled/>
                 )}
-              </FormItem>
-              </div>
-              
+              </FormItem>      
             </Col>
           </Row>
         </Form>
