@@ -14,7 +14,7 @@ class ExceptionData extends React.Component {
     this.columns = [{
       title: '姓名',
       dataIndex: 'name',
-      width: '20%',
+      width: '18%',
     }, {
       title: '检测项目',
       dataIndex: 'prog',
@@ -32,9 +32,9 @@ class ExceptionData extends React.Component {
       dataIndex: 'operation',
       render: (text, record) => {
         return (
-            <Button type="primary">
+            <a type="primary">
               <Link to={`/holographicView?id=${record.dataNum}`}>处理异常</Link>
-            </Button>
+            </a>
           );
       },
     }];
@@ -56,12 +56,12 @@ class ExceptionData extends React.Component {
     return (
       <div className="pagination-block">
         <h1>异常管理</h1>
-        <p style={{marginTop:50,marginLeft:30,marginBottom:30,fontSize:26}}>最新异常信息</p>
+        <p style={{marginTop:50,marginLeft:30,marginBottom:30,fontSize:26}} className="yc-title">最新异常信息</p>
         <Table  
         bordered dataSource={dataSource} 
         columns={columns} 
         style={{marginLeft:30}} 
-        className="table"
+        className="table yc-table"
         pagination={{
           total:MeansInfo.exceptionInfo.meta["total"],
           onChange(pageNumber) {
