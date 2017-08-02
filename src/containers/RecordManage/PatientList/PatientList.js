@@ -1,7 +1,7 @@
 // 客户列表页面
 import React from 'react';
 //import ReactDOM from 'react-dom';
-import { Input,Icon,Button,Row, Col } from 'antd';
+import { Input,Icon,Button } from 'antd';
 import { Link } from 'react-router';
 import { observer } from 'mobx-react';
 import UserList from 'models/UserList';
