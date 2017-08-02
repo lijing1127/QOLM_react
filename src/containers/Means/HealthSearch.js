@@ -7,7 +7,6 @@ import MeansInfo from 'models/MeansInfo';
 import	User	from	'models/User';
 import	$	from	"jquery";
 import	GetIdentityCard	from	"models/GetIdentityCard";
-
 const Search = Input.Search;
 
 @observer
@@ -37,9 +36,9 @@ class HealthSearch extends React.Component {
 				dataIndex: 'operation',
 			render: (text, record) => {
 				return (
-					<Button type="primary" style={{ marginLeft: 80 }}>
+					
 						<Link to={`/means/lookMeans?id=${record.number}`}>查看记录</Link>
-					</Button>
+					
 				);
 			},
 		}];	
@@ -81,7 +80,6 @@ class HealthSearch extends React.Component {
 				<Search
 					className="hsSearch"
 					placeholder="请输入您要查询的身份证号码"
-					style={{ width: 500 }}
 					defaultValue={MeansInfo.idNumber}
 					onSearch={this.handleSearch.bind(this)}
 				/>
@@ -89,7 +87,7 @@ class HealthSearch extends React.Component {
 					bordered dataSource={jilu}
 					columns={columns}
 					style={{marginTop:30}}
-					className="hsTable"
+					className=""
 				/>	
 
 			</div>			

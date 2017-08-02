@@ -4,10 +4,10 @@ body {
 }
 
 .meanSearchs {
-	width: 50%;
+	width: 100%;
 	margin: 0 auto;
 	display: flex;
-	margin-left: 22%;
+	/*margin-left: 22%;*/
 }
 
 .searchInput {

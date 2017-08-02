@@ -71,7 +71,12 @@ class SpineSelect extends React.Component{
         >
           {levelPer}
         </Select>
-        <Table columns={columns} dataSource= {price} className="jzTable"/>
+        <Table 
+          columns={columns} 
+          dataSource= {price} 
+          className="jzTable"
+          pagination={false}
+        />
       </div>          
     );
   }
