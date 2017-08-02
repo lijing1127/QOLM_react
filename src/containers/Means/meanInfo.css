@@ -1,7 +1,13 @@
-
+html {
+	font-size: 20px;
+}
 .info{
-	margin-top: 80px;
+	margin-top: .8rem;
 	border-top: 1px solid #ddd;
+}
+.info p {
+	text-align: center;
+	margin: .5rem auto;
 }
 
 .infoTop,.infoBottom{

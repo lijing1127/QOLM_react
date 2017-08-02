@@ -116,3 +116,20 @@
 		margin-left: 3%;
 	}
 }
+
+//分页的样式调整；
+.pagination-block {
+	.ant-pagination-prev {
+		width: 1.4rem;
+	}
+	.ant-pagination-item {
+		width: 1.8rem;
+		text-align: center; 
+	}
+	.ant-pagination-next {
+		width: 1.4rem;
+	}
+	.ant-pagination-jump-next {
+		width: 1.4rem;
+	}
+}

@@ -28,12 +28,13 @@ class App extends Component {
   //左侧菜单、头部；
   renderAuthorLogin() {
     return (
-      <Layout className="apps">
+      <Layout className="apps" style={{height: document.documentElement.clientHeight, overflowY: "hidden", overflowX: "hidden", }}>
         <Sider
           breakpoint="lg"
           collapsedWidth="0"
           onCollapse={() => {}}
           width={270}
+          style={{zIndex: 999}}
         >
           <div className="logo">
             <img src="../.././images/yblogo.png" />
@@ -45,7 +46,7 @@ class App extends Component {
           <Header style={{ background: '#fff', padding: 0 }}>
             <span className="out-login-button" onClick={this.handleOut}>退出</span>
           </Header>
-          <Content style={{ margin: '24px 16px', padding: 24, background: '#fff'}}>
+          <Content style={{ margin: '24px 16px', padding: 24, background: '#fff', overflowY: "auto", position: "relative", }}>
             {this.props.children}
           </Content>
           <Footer style={{ textAlign: 'center' }}>

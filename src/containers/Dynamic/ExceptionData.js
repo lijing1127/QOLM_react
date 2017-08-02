@@ -5,6 +5,8 @@ import { observer } from 'mobx-react';
 import { Link } from 'react-router';
 import MeansInfo from 'models/MeansInfo';
 
+import ".././style.scss";
+
 @observer
 class ExceptionData extends React.Component {
   constructor(props) {
@@ -52,7 +54,7 @@ class ExceptionData extends React.Component {
     const columns = this.columns;
     const dataSource = MeansInfo.exceptionInfo.data.toJS();
     return (
-      <div>
+      <div className="pagination-block">
         <h1>异常管理</h1>
         <p style={{marginTop:50,marginLeft:30,marginBottom:30,fontSize:26}}>最新异常信息</p>
         <Table  
