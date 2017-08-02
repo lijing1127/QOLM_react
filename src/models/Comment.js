@@ -27,15 +27,9 @@ class Comment {
 			this.Currname.name=CurrName.name;
 		});
 	}
-	// @observable comment={
-	// 	id_number: "",
-	// 	programs_number: "",
-	// 	result: "",
-	// 	doctor_name: "",
-	// 	category: ""
-	// }
+
 	@action async postComment(url,data){
-		const ret =await fetch(url, {
+		fetch(url, {
 			mode: "cors",
 			method: "POST",
 			headers: {"Content-Type": "application/x-www-form-urlencoded",
@@ -47,7 +41,6 @@ class Comment {
 		}).then( function(response) {
 			return response.json();
 		}).then( function(jsonData) {
-			console.log(jsonData);
 			return jsonData;
 		}).catch( function() {
 			alert("出现错误!");

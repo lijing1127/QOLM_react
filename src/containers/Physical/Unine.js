@@ -20,7 +20,7 @@ class Unine extends React.Component {
 	render() {
 		return (
 			<div className="record-content">
-				<PhysicalInfo store={this.state} />
+				<PhysicalInfo className="border-n" store={this.state} />
 			</div>
 		);
 	}

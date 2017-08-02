@@ -52,7 +52,7 @@ class MonitorDataTable extends React.Component {
     const currDates =new Date().toLocaleDateString();
     return (
       <div>
-        <BloodPressureChart />
+      
         <Table bordered 
         dataSource={dataSource} 
         columns={columns}  

@@ -6,6 +6,7 @@ import PhysicalData from "models/PhysicalData";
 import "../style.scss";
 
 const FormItem = Form.Item;
+const Option = Select.Option;
 
 @observer
 class BloodPressure extends React.Component {
@@ -45,11 +46,11 @@ class BloodPressure extends React.Component {
 							{getFieldDecorator('val', {
 							rules: [{ required: false, message: 'Please input your username!' }],
 							})(
-							<Input className="border-n" suffix={<span className="font2">毫克/分升</span>} placeholder="" />
+							<Input className="border-n" suffix={<span className="fontSize">毫克/分升</span>} placeholder="" />
 							)}
 						</FormItem>
 			</Col>
-				<Col span={10} style={{ float: 'right', fontSize: 16 }}>
+				<Col xs={26} sm={12} md={12} lg={12} xl={25} span={26} style={{ float: 'left'}}>
 					<div className="mar-b mar-t">
 					<p className="mar-b">测量类型</p>
                     <FormItem>
@@ -59,8 +60,8 @@ class BloodPressure extends React.Component {
                       })(
                         <Select
                           showSearch
+                          className="fontSize"
                           style={{ width: 200 }}
-                          placeholder=""
                           optionFilterProp="children"
                           onChange={this.handleChange}
                           filterOption={(input, option) => option.props.children.toLowerCase().indexOf(input.toLowerCase()) >= 0}
