@@ -89,7 +89,7 @@ h1, h2, h3, h4 {
 #timeline .timeline-item {
     // margin-bottom: 50px;
     position: relative;
-    height: 246px;
+    // height: 246px;
 }
 #timeline .timeline-item .timeline-icon {
     background: #5cd29d;
@@ -110,7 +110,7 @@ h1, h2, h3, h4 {
 #timeline .timeline-item .timeline-content {
     // width: 45%;
     background: #fff;
-    padding: 20px;
+    // padding: 20px;
     // box-shadow: 0 3px 0 rgba(0, 0, 0, 0.1);
     border-radius: 5px;
     transition: all 0.3s ease;
@@ -164,7 +164,7 @@ h1, h2, h3, h4 {
         left: 0;
     }
     #timeline .timeline-item .timeline-content {
-        width: 90%;
+        width: 100%;
         float: right;
     }
     #timeline .timeline-item .timeline-content:before, #timeline .timeline-item .timeline-content.right:before {
@@ -186,7 +186,7 @@ h1, h2, h3, h4 {
     }   
 }
 .timeline-item:nth-child(even) {
-        top: 80px;
+        // top: 80px;
         float: right;
         width: 50%; 
         // border-left: 1px solid #A1A1A1;
@@ -254,6 +254,12 @@ h1, h2, h3, h4 {
 
 .timeline-num {
     font-size: 0.7rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    word-break: break-all;
 }
 
 
