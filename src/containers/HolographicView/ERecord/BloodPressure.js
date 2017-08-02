@@ -7,6 +7,7 @@ const columns = [{
   key:'0',
   title: '监测日期',
   dataIndex: 'updated_at',
+  width:'20%',
 }, {
   key:'1',
   title: '收缩压',
@@ -39,10 +40,11 @@ class BloodPressure extends React.Component {
   render() {
     const data=PatientRecord.bloodPre.data.slice();
     return ( <div style={{}}>
-            <BloodPressureChart style={{ width: "100%", height: "auto", }} />
+            <BloodPressureChart style={{ width: "30%", height: "auto", }} />
             <Table bordered
               columns={columns}
               dataSource={data}
+              style={{ width: "50%"}}
                />
             </div>
     );
