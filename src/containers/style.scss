@@ -35,10 +35,11 @@
 .inpt.ant-input:not(:first-child), .border-none {
 	border: none;
 	box-shadow: none;
+	margin-top:15px;
 }
 .ant-input-affix-wrapper, .border-none{
 	border: none;
-	border-bottom: 1px solid #e1e1e1;
+	border-bottom: 1px solid #e1e1e1!important;
 	font-size: 16px;
 }
 .ant-input-affix-wrapper .ant-input:not(:first-child) {
@@ -135,5 +136,49 @@
 	}
 	.ant-pagination-jump-next {
 		width: 1.4rem;
+	}
+}
+
+
+
+//体检室模块
+.input-style{
+	margin-top:20px;
+	margin-bottom: 20px;
+}
+.fontSize{
+	font-size:0.8rem;
+}
+.mar-b{
+	float:right;
+	//padding-left:50px;
+}
+.clear{
+	clear:both;
+}
+.inline{
+	display:inline-block;
+}
+.mar-l{
+	//margin-left:20px;
+}
+
+
+//血压测量页面
+#min_BloodPressure{
+	border:none;	
+	border-bottom:none;
+}
+#max_BloodPressure{
+	border:none;	
+}
+.border-n .ant-input{
+	border:none;
+}
+
+
+@media screen and (max-width: 640px){
+	.media{
+		padding-left:0!important;
 	}
 }

@@ -8,6 +8,7 @@ import  GetIdentityCard from  "models/GetIdentityCard";
 import "../style.scss";
 
 const FormItem = Form.Item;
+const Option = Select.Option;
 
 @observer
 class FollowUpSurver extends React.Component {
@@ -60,22 +61,21 @@ class FollowUpSurver extends React.Component {
     return (
       <div className="record-content">
         <h1>随访包测量</h1>
-        <h3 style={{paddingLeft: 80, marginBottom: 40}}>随访包测量</h3>
+        <h3 style={{paddingLeft: 50, marginBottom: 40}}>随访包测量</h3>
         <Form onSubmit={this.handleSubmit} className="login-form record-block">
           <Row>
-            <Col span={10} style={{float: 'left', fontSize: 16 }}>
+            <Col className="fontSize"  xs={26} sm={12} md={12} lg={12} xl={26} span={26} style={{float: 'left'}}>
               <span>请输入身份证号码</span>
+             
               <FormItem>
                 {getFieldDecorator('idCord', {
                   rules: [{ required: true, message: '请输入身份证号码!' }],
                 })(
-                  <Input className="inpt-idcard" 
-                  style={{border: 'none', borderBottom: '1px solid #e1e1e1', 
-                  boxShadown: 'none', borderRadius: 'none'}}/>
+                  <Input className="inpt-idcard "/>
                 )}
               </FormItem>
             </Col>
-            <Col span={10} style={{ float: 'right', fontSize: 16 }}>
+            <Col className="fontSize media" xs={26} sm={12} md={12} lg={12} xl={26} span={26} style={{ float: 'left',paddingLeft:60}}>
               <span>请选择设备号码</span>
               <FormItem>
                 {getFieldDecorator('deviceNum', {
