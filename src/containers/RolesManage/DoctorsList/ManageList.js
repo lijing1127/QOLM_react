@@ -47,13 +47,12 @@ class ManageList extends React.Component {
     const reg = /^(\d{18,18}|\d{15,15}|\d{17,17}x)$/;
     if( reg.test(value) ) {
       UserMana.getRoleList(`http://qolm.ybyt.cc/api/v1/users/get_user_by_id_number?id_number=${value}`);
-      //console.log('success');
       const data = UserMana.RoleList.toJS();
       // console.log(data);
       // console.log(data[0].name);
-      $('.table tbody tr:first-child td:first-child').text(data[0].name);
-      $('.table tbody tr:first-child td:nth-child(2)').text(data[0].id); 
-      $('.table tbody tr:first-child').nextAll().hide();
+      $('.showSer tbody tr:first-child td:first-child').text(data[0].name);
+      $('.showSer tbody tr:first-child td:nth-child(2)').text(data[0].id); 
+      $('.showSer tbody tr:first-child').nextAll().hide();
     }else{
       alert("身份证格式不正确");
       $('.table tbody tr:first-child td:first-child').text('暂无搜索结果');
@@ -74,7 +73,7 @@ class ManageList extends React.Component {
       <div className="search-int">
         <h3>健康管理师列表</h3>
         <Search className="search" onSearch={this.handleSearch}/>
-        <Table bordered 
+        <Table bordered className="showSer"
         dataSource={dataSource} 
         columns={columns} 
         pagination={{ 

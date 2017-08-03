@@ -192,6 +192,12 @@
 	.timeline-item:nth-child(odd) .timeline-content {
 		margin-bottom: 0!important;
 	}
+	.paddleft{
+		padding-left:0!important;
+	}
+	.justify{
+		padding-left:7px!important;
+	}
 }
 
 .inpt-idcard{
@@ -203,8 +209,4 @@
 .paddleft{
 	padding-left:100px;
 }
-@media screen and (max-width: 640px){
-	.paddleft{
-		padding-left:0!important;
-	}
-}
+
