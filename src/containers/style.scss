@@ -184,4 +184,12 @@
 	.media{
 		padding-left:0!important;
 	}
+
+	#timeline .timeline-item {
+		min-height: 338px;
+	}
+
+	.timeline-item:nth-child(odd) .timeline-content {
+		margin-bottom: 0!important;
+	}
 }
