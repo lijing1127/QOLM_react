@@ -35,8 +35,6 @@ class HolographicView extends React.Component {
 				{title: "任务", child: [
 					{name: "待处理异常", componentObj: <Pending store={this.props.location.query.id} />},
 					{name: "已处理异常", componentObj: <Processed store={this.props.location.query.id} />},
-					{name: "随访安排", componentObj: "aaa"},
-					{name: "待随访任务", componentObj: "aaa"},
 				]},
 				{title: "电子档案", child: [
 					{name: "基本信息", componentObj: <EssentialInfo />},
@@ -49,11 +47,10 @@ class HolographicView extends React.Component {
 					{name: "血脂检测", componentObj: <BloodFat />},
 					{name: "心电图展示", componentObj: <Ecg />},
 					{name: "TDS数字中医", componentObj: <TDSd store={this.props.location.query.id} />},
-				]},
-				{title: "电子医疗档案", child: []},
-				{title: "健康评估", child: []},
+				]}
 				
-			]
+			],
+			isClientWidth: 0,
 		};
 		// this.handleChange = this.handleChange.bind(this);
 
@@ -74,8 +71,13 @@ class HolographicView extends React.Component {
 		PatientRecord.getBlooFat(`http://qolm.ybyt.cc/api/v1/examination_check/blood_fat?patient_id=${id}&start_date=${staDate}&end_date=${currDate}&page=1&per_page=10`);
 		PatientRecord.getEcg(`http://qolm.ybyt.cc/api/v1/examination_check/ecg?patient_id=${id}&start_date=${staDate}&end_date=${currDate}&page=1&per_page=10`);
 		PatientRecord.getTDS(`http://qolm.ybyt.cc/api/v1/tds/check?patient_id=${id}`);
+		this.setState({
+			isClientWidth: document.documentElement.clientWidth,
+		})
+		
 	}
 	renderHolographi() {
+
 		const holoProjects = this.state.holoProject;
 		return (
 			holoProjects.map( (holoProject, index) => {
@@ -87,25 +89,33 @@ class HolographicView extends React.Component {
 			})
 		);
 	}	
+	renderClientidth() {
+		return (
+			<Tabs defaultActiveKey="1" onChange={this.handleChange}>
+					{this.renderHolographi()}
+			</Tabs>
+		);
+	}
+	xsClientWidtn() {
+		return (
+			<Pending store={this.props.location.query.id} />
+		);
+	}
 	render() {
 		const userInfo = HolographyData.userInfo;
 		return (
-			<div>
+			<div className="tabs-block">
 				<h1>全息视图</h1>
 				<Row>
-					<Col span={8}>
+					<Col xs={{span: 26}} lg={{span: 8}}>
 						<div className="holo-block">
 							<p key="1">姓名：{userInfo.name}</p>
 							<p key="2">性别：{userInfo.sex}</p>
 							<p key="3">联系方式：{userInfo.phone}</p>
 						</div>
 					</Col>
-					<Col span={24}>
-						<Tabs defaultActiveKey="1" onChange={this.handleChange}>
-							{this.renderHolographi()}
-						</Tabs>
-					</Col>
 				</Row>
+				{this.state.isClientWidth<=768 ? this.xsClientWidtn(): this.renderClientidth()}
 			</div>
 		);
 	}
