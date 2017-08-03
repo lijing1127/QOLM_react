@@ -90,11 +90,11 @@ export default class Holos extends React.Component {
     const data = HolographyData.exData.data.slice();
 		return ( <div className="pend-block">
 				<Row>
-					<Col span={16}>
+					<Col lg={{span: 16}} xs={{span: 26}}>
 						<h3>待处理异常</h3>
 						<Table rowSelection={rowSelection} columns={columns} dataSource={data} />
 					</Col>
-						<Col span={7} style={{marginLeft: 20}}>
+						<Col lg={{span: 7, offset: 2}} xs={{span: 26}}>
 						<h3>处理异常</h3>
 						<div className="mar-top">
 							<Checkbox onChange={this.handleWechat} >微信</Checkbox>

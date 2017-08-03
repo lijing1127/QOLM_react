@@ -4,6 +4,9 @@ import createG2 from 'g2-react';
 // import { Stat, Frame } from 'g2';
 import PatientRecord from 'models/PatientRecord';
 
+let clientW = document.documentElement.clientWidth;
+let clientH = document.documentElement.clientHeight;
+
 @observer
 class HigherChart extends Component {
   static propTypes = {
@@ -39,8 +42,8 @@ class HigherChart extends Component {
 class MyComponent extends Component {
   state = {
     shape: 'line',
-    width: 1100,
-    height: 500,
+    width: clientW<= 768 ? clientW - 80 : 1100,
+    height: clientW<= 768 ? clientH/2 - 100 : 500,
     plotCfg: {
       margin: [20, 100, 50, 120],
     },
