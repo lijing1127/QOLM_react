@@ -1,6 +1,6 @@
 import React, { PropTypes } from "react";
 import { observer } from "mobx-react";
-import { Form,Input, Button, Row, Col, Select,  Alert,message } from 'antd';
+import { Form,Input, Button, Row, Col, Select,  Alert,message,Icon } from 'antd';
 import UserPhysical from "models/UserPhysical";
 import	User	from	'models/User';
 import	$	from	"jquery";
@@ -8,7 +8,7 @@ import  GetIdentityCard from  "models/GetIdentityCard";
 import "../style.scss";
 
 const FormItem = Form.Item;
-const Option = Select.Option;
+// const Option = Select.Option;
 
 @observer
 class FollowUpSurver extends React.Component {
@@ -19,11 +19,11 @@ class FollowUpSurver extends React.Component {
     super(props);
   }
   componentDidMount() {
-	User.fetchUsers().then(() => {
-		GetIdentityCard.getCard(`http://qolm.ybyt.cc/api/v1/examination_input/get_auto_identity_card?id=${User.current_user_info.id}`);		
-	}); 
-	UserPhysical.getDevice("http://qolm.ybyt.cc/api/v1/examination_input/number");
-  }
+  	User.fetchUsers().then(() => {
+  		GetIdentityCard.getCard(`http://qolm.ybyt.cc/api/v1/examination_input/get_auto_identity_card?id=${User.current_user_info.id}`);		
+  	}); 
+  	UserPhysical.getDevice("http://qolm.ybyt.cc/api/v1/examination_input/number");
+    }
   handleSubmit = (e) => {
     const { validateFields, resetFields } = this.props.form;
     e.preventDefault();
@@ -62,16 +62,18 @@ class FollowUpSurver extends React.Component {
       <div className="record-content">
         <h1>随访包测量</h1>
         <h3 style={{paddingLeft: 50, marginBottom: 40}}>随访包测量</h3>
+
+
+
         <Form onSubmit={this.handleSubmit} className="login-form record-block">
           <Row>
-            <Col className="fontSize"  xs={26} sm={12} md={12} lg={12} xl={26} span={26} style={{float: 'left'}}>
+            <Col className="fontSize"  xs={26} sm={12} lg={12} xl={26} span={26} style={{float: 'left'}}>
               <span>请输入身份证号码</span>
-             
               <FormItem>
-                {getFieldDecorator('idCord', {
+                {getFieldDecorator('id',{
                   rules: [{ required: true, message: '请输入身份证号码!' }],
                 })(
-                  <Input className="inpt-idcard "/>
+                  <Input className="inpt-idcard"/>
                 )}
               </FormItem>
             </Col>

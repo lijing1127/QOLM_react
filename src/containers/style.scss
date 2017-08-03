@@ -96,7 +96,7 @@
 
 
 //新建档案响应式
-@media screen and (max-width: 950px){
+/*@media screen and (max-width: 950px){
 	.newUser {
 		width: 100%;
 	}
@@ -120,7 +120,7 @@
 	.yc-title ,.yc-table{
 		margin-left: 0!important;
 	}
-}
+}*/
 
 //分页的样式调整；
 .pagination-block {
@@ -182,6 +182,21 @@
 
 @media screen and (max-width: 640px){
 	.media{
+		padding-left:0!important;
+	}
+}
+
+.inpt-idcard{
+	//border-bottom:1px solid #000;
+}
+.fleft{
+	float:left;
+}
+.paddleft{
+	padding-left:100px;
+}
+@media screen and (max-width: 640px){
+	.paddleft{
 		padding-left:0!important;
 	}
 }
