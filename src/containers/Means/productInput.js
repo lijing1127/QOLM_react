@@ -53,7 +53,7 @@ class Means extends React.Component{
       <div>
       <Form onSubmit={this.handleSubmit}>
         <Row>
-          <Col span={4}>
+          <Col lg={{span:4}}>
             <FormItem>
               {getFieldDecorator('name', {
                 rules: [{ required: false, message: 'Please input your note!' }],
@@ -70,7 +70,7 @@ class Means extends React.Component{
               )}
             </FormItem>
           </Col>
-          <Col span={4} style={{marginLeft: "5px"}}>
+          <Col lg={{span:4}} style={{marginLeft: "5px"}}>
             <FormItem>
               {getFieldDecorator('identifier', {
                 rules: [{ required: false, message: '' }],
@@ -79,7 +79,7 @@ class Means extends React.Component{
               )}
             </FormItem>
           </Col>
-          <Col span={11} style={{marginLeft: "5px"}}>
+          <Col lg={{span:11}} style={{marginLeft: "5px"}}>
             <FormItem>
               {getFieldDecorator('usage', {
                 rules: [{ required: false, message: '' }],
@@ -89,7 +89,7 @@ class Means extends React.Component{
             </FormItem>
            
           </Col>
-          <Col span={2} style={{marginLeft: "5px"}}>
+          <Col lg={{span:2}} style={{marginLeft: "5px"}}>
             <FormItem>
               {getFieldDecorator('count', {
                 rules: [{ required: false, message: '' }],
@@ -99,7 +99,7 @@ class Means extends React.Component{
             </FormItem>
             
           </Col>
-          <Col span={2} style={{marginLeft: "5px", float: "right"}}>
+          <Col lg={{span:2}} style={{marginLeft: "5px", float: "right"}}>
           <FormItem>
               <Button type="primary" onClick={this.handleSubmit}>添加</Button>
           </FormItem>
