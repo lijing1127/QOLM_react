@@ -47,7 +47,7 @@ class Home extends Component {
 			</div>
 			<div>
 				<Row>
-					<Col xs={{ span: 12 }} lg={{ span: 6, offset: 2 }} className="list-pro">
+					<Col xs={{ span: 8, offset: 1 }} lg={{ span: 6, offset: 2 }} className="list-pro">
 						<span>档案室</span>
 						<ul className="clearfix">
 							<li> 
@@ -58,7 +58,7 @@ class Home extends Component {
 							</li>
 						</ul>
 					</Col>
-					<Col xs={{ span: 12 }} lg={{ span: 6, offset: 2 }} className="list-pro">
+					<Col xs={{ span: 9, offset: 1 }} lg={{ span: 6, offset: 2 }} className="list-pro">
 						<span>方案室</span>
 						<ul className="clearfix">
 							<li> 
@@ -74,7 +74,7 @@ class Home extends Component {
 					</Col>
 				</Row>
 				<Row style={{marginTop: 10}}>
-					<Col xs={{ span: 12 }} lg={{ span: 6, offset: 2 }} className="list-pro">
+					<Col xs={{ span: 12, offset: 1 }} lg={{ span: 6, offset: 2 }} className="list-pro">
 						<span>体检室</span>
 						<ul className="clearfix">
 							<li>

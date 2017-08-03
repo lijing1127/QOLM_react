@@ -89,7 +89,7 @@ h1, h2, h3, h4 {
 #timeline .timeline-item {
     // margin-bottom: 50px;
     position: relative;
-    // height: 246px;
+    min-height: 310px;
 }
 #timeline .timeline-item .timeline-icon {
     background: #5cd29d;
