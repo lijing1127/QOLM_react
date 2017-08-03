@@ -41,3 +41,18 @@
 	
 	width: 100%;
 }
+.mar-b{
+	margin-bottom: 10px;
+}
+@media screen and (max-width: 640px){
+	.col{
+		/*float:left;*/
+		display: block;
+		margin-left:0!important;
+		width:100%!important;
+	}
+	.pjPeople{
+		float: none;
+		display: block;
+	}
+}

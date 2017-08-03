@@ -1,7 +1,7 @@
 // 评价客户页面
 import React, { PropTypes } from 'react';
 //import ReactDOM from 'react-dom';
-import { Rate,Button,Input,message } from 'antd';
+import { Rate,Button,Input,message,Row,Col } from 'antd';
 import { observer } from 'mobx-react';
 import './Evaluate.css';
 // import  User  from  'models/User';
@@ -51,14 +51,17 @@ class Evaluate extends React.Component{
 			<div>
 				<h1 style={{marginBottom:50}}>管理评价</h1>
 				<div className="pjContent">
-					<b>姓名：<span>{this.props.location.query.name}</span></b>
-					<b style={{marginLeft:50}}>评分：</b>
+		
+					<b >姓名：<span>{this.props.location.query.name}</span></b>
+					<b className="col" style={{marginLeft:50}}>评分：
 
 					<span className="pjStar">
 					<Rate onChange={this.handleChange} value={value} />
 						{value && <span className="ant-rate-text">{value} 星</span>}
 					</span>
-					<b className="pjPeople clearfix">审评人：<span>{name}</span>　　　日期：<span>{this.props.location.query.time}</span></b>
+					</b>
+					<b className="pjPeople mar-b clearfix">日期：<span>{this.props.location.query.time}</span></b>
+					<b className="pjPeople clearfix">审评人：<span>{name}</span>　　</b>
 					<Input type="textarea" rows="15" cols="20" placeholder="请输入您的评价" className="pjArea"/>
 					<Button type="primary" className="pjPost" onClick={this.handleClick}>提交评价</Button>
 				</div>

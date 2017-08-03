@@ -76,8 +76,8 @@ class NormalLoginForm extends React.Component {
                 )}
               </FormItem>
             </Col>
-            <Col className="fleft" xs={{span: 26}} lg={{span: 10}} >
-                <p className="mar-x fontSize">民族</p>
+            <Col className="fleft justify" xs={{span: 26}} lg={{span: 10}}>
+                <p className="mar-x fontSize">民　　族</p>
                   <FormItem className="selectMz fontSize ">
                     {getFieldDecorator('nation', {
                       rules: [{ required: false, message: 'Please input your username!' }],
@@ -111,8 +111,8 @@ class NormalLoginForm extends React.Component {
               </FormItem>
             </Col>
             <Col xs={{span: 26}} lg={{span: 10}}>
-              <div className="fleft">
-                <p className="fontSize">性别</p>
+              <div className="fleft justify">
+                <p className="fontSize">性　　别</p>
                   <FormItem>
                     {getFieldDecorator('userSex', {
                       rules: [{ required: false, message: 'Please input your username!' }],
@@ -138,7 +138,7 @@ class NormalLoginForm extends React.Component {
               </FormItem>
             </Col>
             <Col>
-              <div className="fleft" >
+              <div className="fleft justify" >
                 <p className="fontSize">婚姻状况</p>
                   <FormItem>
                     {getFieldDecorator('marrayState', {
@@ -174,7 +174,7 @@ class NormalLoginForm extends React.Component {
                     rules: [{ required: false, message: 'Please input your username!' }],
                   })(
                     <Input className="inpt inpt-left-f" addonBefore={<span style={{fontSize: 16}}>
-                    职业</span>}/>
+                    职　　业</span>}/>
                   )}
                 </FormItem>
               </div>
