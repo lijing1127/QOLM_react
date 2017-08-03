@@ -1,15 +1,17 @@
 // 评价客户页面
-import React from 'react';
+import React, { PropTypes } from 'react';
 //import ReactDOM from 'react-dom';
-import { Rate,Button,Input } from 'antd';
+import { Rate,Button,Input,message } from 'antd';
 import { observer } from 'mobx-react';
 import './Evaluate.css';
-import  User  from  'models/User';
+// import  User  from  'models/User';
 import Comment from 'models/Comment';
 
 @observer 
 class Evaluate extends React.Component{
-
+	static propTypes = {
+		location: PropTypes.object,
+	}
 	constructor(props){
 		super(props);
 		this.state = {
@@ -20,14 +22,14 @@ class Evaluate extends React.Component{
 	}
 	componentDidMount(){
 		Comment.getCurr('http://qolm.ybyt.cc/api/v1/users/current_user');
-  	}
+	}
 	
 	handleClick=()=>{
 		// this.props.textarea.value((err,values)=>{
 		// 	if(!err){
 				Comment.postComment('http://qolm.ybyt.cc/api/v1/comments/comment',
 					`id_number=${this.props.location.query.proNum}&programs_number=${this.props.location.query.idNum}$result=123456$doctor_name=river&category=1`);
-				console.log(values);
+				// console.log(values);
 				message.success('提交成功');
 
 		// 	}else{
