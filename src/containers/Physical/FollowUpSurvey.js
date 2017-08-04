@@ -1,14 +1,13 @@
 import React, { PropTypes } from "react";
 import { observer } from "mobx-react";
-import { Form,Input, Button, Row, Col, Select,  Alert,message,Icon } from 'antd';
+import { Form,Input, Button, Row, Col, Select,  Alert,message } from 'antd';
 import UserPhysical from "models/UserPhysical";
 import	User	from	'models/User';
-import	$	from	"jquery";
+// import	$	from	"jquery";
 import  GetIdentityCard from  "models/GetIdentityCard";
 import "../style.scss";
 
 const FormItem = Form.Item;
-// const Option = Select.Option;
 
 @observer
 class FollowUpSurver extends React.Component {
@@ -19,11 +18,11 @@ class FollowUpSurver extends React.Component {
     super(props);
   }
   componentDidMount() {
-  	User.fetchUsers().then(() => {
-  		GetIdentityCard.getCard(`http://qolm.ybyt.cc/api/v1/examination_input/get_auto_identity_card?id=${User.current_user_info.id}`);		
-  	}); 
-  	UserPhysical.getDevice("http://qolm.ybyt.cc/api/v1/examination_input/number");
-    }
+	User.fetchUsers().then(() => {
+		GetIdentityCard.getCard(`http://qolm.ybyt.cc/api/v1/examination_input/get_auto_identity_card?id=${User.current_user_info.id}`);		
+	}); 
+	UserPhysical.getDevice("http://qolm.ybyt.cc/api/v1/examination_input/number");
+  }
   handleSubmit = (e) => {
     const { validateFields, resetFields } = this.props.form;
     e.preventDefault();
@@ -50,34 +49,36 @@ class FollowUpSurver extends React.Component {
   }
  
   render() {
-	const {idcard}=GetIdentityCard.Idcard;
-    if(idcard ==="no_id"){
-		$(".ant-form-item-control:first").text();
-    }else{
-      $(".ant-form-item-control:first").text(idcard);
-    }
+	// const {idcard}=GetIdentityCard.Idcard;
+ //    if(idcard ==="no_id"){
+ //      $(".showID>.ant-form-item-control input").val('123');
+ //      // $(".inpt-idcard").val('123');
+	// 	  // $(".ant-form-item-control:first").text('123');
+ //    }else{
+ //      const input=document.getElementById('idCord');
+ //      console.log(input);
+ //      $('.ant-input .ant-input-lg .inpt-idcard').val('123');
+ //      // $(".ant-form-item-control:first").text(idcard);
+ //    }
     const { getFieldDecorator } = this.props.form;
     const { display } = UserPhysical.statusBool;
     return (
       <div className="record-content">
         <h1>随访包测量</h1>
-        <h3 style={{paddingLeft: 50, marginBottom: 40}}>随访包测量</h3>
-
-
-
+        <h3 style={{paddingLeft: 80, marginBottom: 40}}>随访包测量</h3>
         <Form onSubmit={this.handleSubmit} className="login-form record-block">
           <Row>
-            <Col className="fontSize"  xs={26} sm={12} lg={12} xl={26} span={26} style={{float: 'left'}}>
+            <Col className="fontSize" xs={26} sm={12} md={12} lg={12} xl={25} span={26} style={{float: 'left'}}>
               <span>请输入身份证号码</span>
-              <FormItem>
-                {getFieldDecorator('id',{
+              <FormItem className="showID">
+                {getFieldDecorator('idCord', {
                   rules: [{ required: true, message: '请输入身份证号码!' }],
                 })(
                   <Input className="inpt-idcard"/>
                 )}
               </FormItem>
             </Col>
-            <Col className="fontSize media" xs={26} sm={12} md={12} lg={12} xl={26} span={26} style={{ float: 'left',paddingLeft:60}}>
+            <Col className="fontSize paddleft" xs={26} sm={12} md={12} lg={12} xl={25} span={26} style={{ float: 'left'}}>
               <span>请选择设备号码</span>
               <FormItem>
                 {getFieldDecorator('deviceNum', {
@@ -93,7 +94,6 @@ class FollowUpSurver extends React.Component {
                     </Select>
                 )}
               </FormItem>
-             
             </Col>
           </Row>           
           <FormItem>
@@ -102,7 +102,6 @@ class FollowUpSurver extends React.Component {
         </Form>
         <Alert message="提交成功" type="success" style={{ display: `${display}`, position: "absolute", top: "20px", width: "100%" }} />
       </div>
-      
     );
   }
 }

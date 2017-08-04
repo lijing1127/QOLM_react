@@ -1,6 +1,6 @@
 // 异常处理页面
 import React from 'react';
-import {Table, Button } from 'antd';
+import {Table, Row,Col } from 'antd';
 import { observer } from 'mobx-react';
 import { Link } from 'react-router';
 import MeansInfo from 'models/MeansInfo';
@@ -57,18 +57,23 @@ class ExceptionData extends React.Component {
       <div className="pagination-block">
         <h1>异常管理</h1>
         <p style={{marginTop:50,marginLeft:30,marginBottom:30,fontSize:26}} className="yc-title">最新异常信息</p>
-        <Table  
-        bordered dataSource={dataSource} 
-        columns={columns} 
-        style={{marginLeft:30}} 
-        className="table yc-table"
-        pagination={{
-          total:MeansInfo.exceptionInfo.meta["total"],
-          onChange(pageNumber) {
-              MeansInfo.getUnnormal(`http://qolm.ybyt.cc/api/v1/exception/data?page=${pageNumber}&per_page=10`);
-          }
-        }}
-        />
+        <Row>
+          <Col  xs={26} lg={26}>
+            <Table  
+              bordered dataSource={dataSource} 
+              columns={columns} 
+              style={{marginLeft:30}} 
+              className="table yc-table"
+              pagination={{
+                total:MeansInfo.exceptionInfo.meta["total"],
+                onChange(pageNumber) {
+                    MeansInfo.getUnnormal(`http://qolm.ybyt.cc/api/v1/exception/data?page=${pageNumber}&per_page=10`);
+                }
+              }}
+            />
+          </Col>
+        </Row>
+        
         
       </div>
     );

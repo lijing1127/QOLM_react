@@ -73,7 +73,7 @@ class HolographicView extends React.Component {
 		PatientRecord.getTDS(`http://qolm.ybyt.cc/api/v1/tds/check?patient_id=${id}`);
 		this.setState({
 			isClientWidth: document.documentElement.clientWidth,
-		})
+		});
 		
 	}
 	renderHolographi() {

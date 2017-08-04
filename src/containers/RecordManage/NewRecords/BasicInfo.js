@@ -173,8 +173,7 @@ class NormalLoginForm extends React.Component {
                   {getFieldDecorator('profession', {
                     rules: [{ required: false, message: 'Please input your username!' }],
                   })(
-                    <Input className="inpt inpt-left-f" addonBefore={<span style={{fontSize: 16}}>
-                    职　　业</span>}/>
+                    <Input className="inpt inpt-left-f" addonBefore={<span style={{fontSize: 16}}>职　　业</span>}/>
                   )}
                 </FormItem>
               </div>
