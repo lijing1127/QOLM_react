@@ -200,9 +200,7 @@
 	}
 }
 
-.inpt-idcard{
-	//border-bottom:1px solid #000;
-}
+
 .fleft{
 	float:left;
 }
@@ -210,3 +208,10 @@
 	padding-left:100px;
 }
 
+
+
+.inpt-idcard{
+	border:none;
+	border-bottom:1px solid #e1e1e1;
+	margin-top:13px
+}

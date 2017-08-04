@@ -1,6 +1,6 @@
 //这是方案室的记录查询
 import React, { PropTypes } from "react";
-import { Input,Table,Button } from 'antd';
+import { Input,Table} from 'antd';
 import { Link } from 'react-router';
 import { observer } from 'mobx-react';
 import MeansInfo from 'models/MeansInfo';
