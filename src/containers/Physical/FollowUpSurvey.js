@@ -1,6 +1,6 @@
 import React, { PropTypes } from "react";
 import { observer } from "mobx-react";
-import { Form,Input, Button, Row, Col, Select,  Alert,message,Icon } from 'antd';
+import { Form,Input, Button, Row, Col, Select,  Alert,message } from 'antd';
 import UserPhysical from "models/UserPhysical";
 import	User	from	'models/User';
 import	$	from	"jquery";
@@ -19,10 +19,10 @@ class FollowUpSurver extends React.Component {
     super(props);
   }
   componentDidMount() {
-  	User.fetchUsers().then(() => {
-  		GetIdentityCard.getCard(`http://qolm.ybyt.cc/api/v1/examination_input/get_auto_identity_card?id=${User.current_user_info.id}`);		
-  	}); 
-  	UserPhysical.getDevice("http://qolm.ybyt.cc/api/v1/examination_input/number");
+    User.fetchUsers().then(() => {
+      GetIdentityCard.getCard(`http://qolm.ybyt.cc/api/v1/examination_input/get_auto_identity_card?id=${User.current_user_info.id}`);		
+    }); 
+    UserPhysical.getDevice("http://qolm.ybyt.cc/api/v1/examination_input/number");
     }
   handleSubmit = (e) => {
     const { validateFields, resetFields } = this.props.form;
